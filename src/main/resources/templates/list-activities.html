@@ -25,14 +25,14 @@
                     <th>Fecha</th>
                     <th>Acciones</th>
                    </tr>
-                   <tr th:each="activity : ${activities}">
-                    <td th:text="${activity.id}"></td>
-                    <td th:text="${activity.description}"></td>
-                    <td th:text="${activity.docente}"></td>
-                    <td th:text="${activity.date}"></td>
+                   <tr th:each="act : ${activity}">
+                    <td th:text="${act.id}"></td>
+                    <td th:text="${act.description}"></td>
+                    <td th:text="${act.docente}"></td>
+                    <td th:text="${act.date}"></td>
                     <td>
-                        <a class="btn btn-info" th:href="@{'/editar/'+${activity.id}}">Editar</a>
-                        <a class="btn btn-danger" th:href="@{'/eliminar/'+${activity.id}}" onclick="return confirm('Seguro desea eliminar este registro?')">Eliminar</a>
+                        <a class="btn btn-info" th:href="@{'/editar/'+${act.id}}">Editar</a>
+                        <a class="btn btn-danger" th:href="@{'/eliminar/'+${act.id}}" onclick="return confirm('Seguro desea eliminar este registro?')">Eliminar</a>
                     </td>
                    </tr>
                 </table>
